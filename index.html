@@ -52,15 +52,22 @@
 
                 <div class="manual-container">
                     <!-- Image Map for clickable areas -->
-                    <img src="manual_v4.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map">
+                    <!-- usemap needs to match map name exactly including # -->
+                    <img src="manual_v4.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map"
+                        style="width: 100%; height: auto; display: block;">
 
                     <map name="manual-map">
+                        <!-- 
+                            COORDINATES ADJUSTMENT:
+                            Assuming original image width is around 900-1000px.
+                            Expanding hit areas to be very generous.
+                        -->
                         <!-- YouTube Link (Left Bottom) -->
-                        <area shape="rect" coords="50,900,450,980"
-                            href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank" alt="유튜브 가이드 시청">
+                        <area shape="rect" coords="30,800,430,960" href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRkjzgb"
+                            target="_blank" alt="유튜브 가이드 시청">
 
                         <!-- SmartStore Link (Right Bottom) -->
-                        <area shape="rect" coords="460,900,860,980" href="https://smartstore.naver.com/habaraki72"
+                        <area shape="rect" coords="440,800,840,960" href="https://smartstore.naver.com/habaraki72"
                             target="_blank" alt="네이버 스토어 구매">
                     </map>
                 </div>
