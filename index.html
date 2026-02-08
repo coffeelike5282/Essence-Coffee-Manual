@@ -11,6 +11,20 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+
+    <style>
+        /* Mobile-first specific adjustments */
+        @media (max-width: 768px) {
+            .card {
+                padding: 1.5rem 1rem !important;
+                border-radius: 0 !important;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -41,11 +55,11 @@
                     <img src="manual_v4.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map">
 
                     <map name="manual-map">
-                        <!-- YouTube Link (Left Bottom) - Approximation: Check if adjustments needed -->
+                        <!-- YouTube Link (Left Bottom) -->
                         <area shape="rect" coords="50,900,450,980"
                             href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank" alt="유튜브 가이드 시청">
 
-                        <!-- SmartStore Link (Right Bottom) - Approximation: Check if adjustments needed -->
+                        <!-- SmartStore Link (Right Bottom) -->
                         <area shape="rect" coords="460,900,860,980" href="https://smartstore.naver.com/habaraki72"
                             target="_blank" alt="네이버 스토어 구매">
                     </map>
@@ -53,7 +67,7 @@
             </div>
         </main>
 
-        <!-- Script later to make image map responsive (optional, but recommended for mobile) -->
+        <!-- Script to make image map responsive -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/image-map-resizer.min.js"></script>
         <script>
