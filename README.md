@@ -1,4 +1,4 @@
-# Espresso Manual Project
+# Essence Coffee Manual Project
 
 ## Project Goal
 
