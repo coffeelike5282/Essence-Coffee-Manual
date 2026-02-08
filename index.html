@@ -53,22 +53,45 @@
                 <div class="manual-container">
                     <!-- Image Map for clickable areas -->
                     <!-- usemap needs to match map name exactly including # -->
-                    <img src="manual_v4.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map"
+                    <img src="manual_v5.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map"
                         style="width: 100%; height: auto; display: block;">
 
                     <map name="manual-map">
                         <!-- 
                             COORDINATES ADJUSTMENT:
-                            Assuming original image width is around 900-1000px.
-                            Expanding hit areas to be very generous.
+                            Targeting the brown buttons at the bottom more precisely.
+                            Assuming typical manual width ~900-1000px.
+                            Left Button (YouTube): x1=340, y1=850, x2=640, y2=920 (approximate relative to full width)
+                            Wait, let's try percentage-based logic via the resizer script, but coords must be based on original image size.
+                            Let's assume standard width 1080px (common for mobile design).
+                            Left Button: 520~800 height range? No, button is at bottom.
+                            Let's try:
+                            Left: 460, 1680, 800, 1780 (if long image)
+                            Actually, without seeing the image dimensions, I will try a standard bottom-left / bottom-right split for a wide footer.
+                            
+                            Let's try these specific coordinates based on "brown button at bottom":
+                            Left Button: 280, 1370, 770, 1470 (If 1080x1920) -> Too specific.
+                            Let's try a very wide hit area for the bottom 10% of the image, split in half.
+                            
+                            Coordinates format: x1,y1,x2,y2
+                            Left: 5% to 48% width, 90% to 98% height
+                            Right: 52% to 95% width, 90% to 98% height
+                            
+                            Let's guess Original Image is ~1000px wide x 1500px high?
+                            Left: 50, 1350, 480, 1480
+                            Right: 520, 1350, 950, 1480
+                            
+                            Wait, the user said "brown background".
+                            I'll try coordinates that target the bottom section specifically.
                         -->
-                        <!-- YouTube Link (Left Bottom) -->
-                        <area shape="rect" coords="30,800,430,960" href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRkjzgb"
-                            target="_blank" alt="유튜브 가이드 시청">
+                        <!-- YouTube Link (Bottom Left) -->
+                        <area shape="rect" coords="395,1370,610,1430"
+                            href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank" alt="유튜브 가이드 시청">
 
-                        <!-- SmartStore Link (Right Bottom) -->
-                        <area shape="rect" coords="440,800,840,960" href="https://smartstore.naver.com/habaraki72"
+                        <!-- SmartStore Link (Bottom Right) -->
+                        <area shape="rect" coords="620,1370,835,1430" href="https://smartstore.naver.com/habaraki72"
                             target="_blank" alt="네이버 스토어 구매">
+
                     </map>
                 </div>
             </div>
