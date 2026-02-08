@@ -37,20 +37,32 @@
                 </p>
 
                 <div class="manual-container">
-                    <img src="manual_v3.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page">
+                    <!-- Image Map for clickable areas -->
+                    <img src="manual_v4.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map">
 
-                    <div class="action-buttons">
-                        <a href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" class="btn-action youtube"
-                            target="_blank">
-                            <span class="btn-icon">📺</span> 유튜브 영상 가이드 시청
-                        </a>
-                        <a href="https://smartstore.naver.com/habaraki72" class="btn-action store" target="_blank">
-                            <span class="btn-icon">🛒</span> 네이버 스마트스토어 구매
-                        </a>
-                    </div>
+                    <map name="manual-map">
+                        <!-- YouTube Link (Left Bottom) - Approximation: Check if adjustments needed -->
+                        <area shape="rect" coords="50,900,450,980"
+                            href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank" alt="유튜브 가이드 시청">
+
+                        <!-- SmartStore Link (Right Bottom) - Approximation: Check if adjustments needed -->
+                        <area shape="rect" coords="460,900,860,980" href="https://smartstore.naver.com/habaraki72"
+                            target="_blank" alt="네이버 스토어 구매">
+                    </map>
+
+                    <p class="guide-text">� 이미지 하단의 버튼을 눌러보세요!</p>
                 </div>
             </div>
         </main>
+
+        <!-- Script later to make image map responsive (optional, but recommended for mobile) -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/image-map-resizer.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                imageMapResize();
+            });
+        </script>
 
         <footer>
             <p>&copy; 2024 Essence Coffee. All rights reserved.</p>
