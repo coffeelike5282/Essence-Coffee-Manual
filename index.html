@@ -50,56 +50,33 @@
                     디지털 가이드를 확인하세요.
                 </p>
 
-                <div class="manual-container">
-                    <!-- Image Map for clickable areas -->
-                    <!-- usemap needs to match map name exactly including # -->
-                    <img src="manual_v5.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page" usemap="#manual-map"
+                <div class="manual-container" style="position: relative; width: 100%;">
+                    <p class="guide-text"
+                        style="text-align: center; color: #d4a373; margin-bottom: 10px; font-weight: bold;">👇 아래 버튼을
+                        눌러보세요!</p>
+
+                    <!-- Main Image -->
+                    <img src="manual_v6.jpg" alt="커빠 에센스 커피 100% 즐기기" class="manual-page"
                         style="width: 100%; height: auto; display: block;">
 
-                    <map name="manual-map">
-                        <!-- 
-                            COORDINATES ADJUSTMENT:
-                            Targeting the brown buttons at the bottom more precisely.
-                            Assuming typical manual width ~900-1000px.
-                            Left Button (YouTube): x1=340, y1=850, x2=640, y2=920 (approximate relative to full width)
-                            Wait, let's try percentage-based logic via the resizer script, but coords must be based on original image size.
-                            Let's assume standard width 1080px (common for mobile design).
-                            Left Button: 520~800 height range? No, button is at bottom.
-                            Let's try:
-                            Left: 460, 1680, 800, 1780 (if long image)
-                            Actually, without seeing the image dimensions, I will try a standard bottom-left / bottom-right split for a wide footer.
-                            
-                            Let's try these specific coordinates based on "brown button at bottom":
-                            Left Button: 280, 1370, 770, 1470 (If 1080x1920) -> Too specific.
-                            Let's try a very wide hit area for the bottom 10% of the image, split in half.
-                            
-                            Coordinates format: x1,y1,x2,y2
-                            Left: 5% to 48% width, 90% to 98% height
-                            Right: 52% to 95% width, 90% to 98% height
-                            
-                            Let's guess Original Image is ~1000px wide x 1500px high?
-                            Left: 50, 1350, 480, 1480
-                            Right: 520, 1350, 950, 1480
-                            
-                            Wait, the user said "brown background".
-                            I'll try coordinates that target the bottom section specifically.
-                        -->
-                        <!-- YouTube Link (Bottom Left) -->
-                        <area shape="rect" coords="395,1370,610,1430"
-                            href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank" alt="유튜브 가이드 시청">
+                    <!-- Overlay Link: YouTube (Left Bottom) -->
+                    <!-- adjust top/height/width/left percentages based on visual estimation of the bottom button row -->
+                    <a href="https://youtu.be/1MJZxNVQneg?si=K-qOFvQhRHzkjzgb" target="_blank"
+                        style="position: absolute; bottom: 3%; left: 5%; width: 44%; height: 10%; display: block; z-index: 10; cursor: pointer;">
+                        <!-- Debugging border (remove later): border: 2px solid red; -->
+                    </a>
 
-                        <!-- SmartStore Link (Bottom Right) -->
-                        <area shape="rect" coords="620,1370,835,1430" href="https://smartstore.naver.com/habaraki72"
-                            target="_blank" alt="네이버 스토어 구매">
-
-                    </map>
+                    <!-- Overlay Link: SmartStore (Right Bottom) -->
+                    <a href="https://smartstore.naver.com/habaraki72" target="_blank"
+                        style="position: absolute; bottom: 3%; right: 5%; width: 44%; height: 10%; display: block; z-index: 10; cursor: pointer;">
+                        <!-- Debugging border (remove later): border: 2px solid blue; -->
+                    </a>
                 </div>
             </div>
         </main>
 
         <!-- Script to make image map responsive -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/image-map-resizer.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/image-map-resizer.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 imageMapResize();
